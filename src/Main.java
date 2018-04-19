@@ -45,10 +45,9 @@ public class Main {
      */
     public static void mergeSort(ArrayList<Integer> arrayList)
     {
-        //throw new UnsupportedOperationException("mergeSort() has not been implemented yet");
         int q = arrayList.size()/2;
         ArrayList<Integer> first = new ArrayList<Integer>();
-        
+
 
     }
 
@@ -75,7 +74,20 @@ public class Main {
      * @param mid the boundary point of the two ranges. arrayList[mid] is in the second range.
      * @param hi the index of the last element in the second range + 1.
      */
-    public static void merge(ArrayList<Integer> arrayList, int lo, int mid, int hi) {
-        throw new UnsupportedOperationException("merge() has not been implemented yet");
+    public static void merge(ArrayList<Integer> arrayList, int lo, int mid, int hi)
+    {
+        //throw new UnsupportedOperationException("merge() has not been implemented yet");
+        ArrayList<Integer> n = new ArrayList<Integer>();
+        int k = 0;
+        //for(int i = lo; i < hi; i++)
+        while()
+        {
+            if (arrayList.get(lo + k) <= arrayList.get(mid + k))
+            {
+                n.add(arrayList.get(lo + k));
+                k++;
+            }
+        }
+
     }
 }
