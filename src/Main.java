@@ -76,11 +76,11 @@ public class Main {
      */
     public static void merge(ArrayList<Integer> arrayList, int lo, int mid, int hi)
     {
-        //throw new UnsupportedOperationException("merge() has not been implemented yet");
         ArrayList<Integer> n = new ArrayList<Integer>();
-        int k = 0;
-        //for(int i = lo; i < hi; i++)
-        while()
+        int q = lo;
+        int w = mid;
+
+        while(q < mid || w < hi)
         {
             if (arrayList.get(lo + k) <= arrayList.get(mid + k))
             {
