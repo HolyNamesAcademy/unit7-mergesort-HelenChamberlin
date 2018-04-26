@@ -45,9 +45,8 @@ public class Main {
      */
     public static void mergeSort(ArrayList<Integer> arrayList)
     {
-        int q = arrayList.size()/2;
-        ArrayList<Integer> first = new ArrayList<Integer>();
-
+        sort(arrayList, 0, arrayList.size());
+        merge(arrayList, 0, arrayList.size()/2, arrayList.size());
 
     }
 
@@ -60,9 +59,21 @@ public class Main {
      * @param lo the index of the first element in the range
      * @param hi the index of the last element in the range + 1.
      */
-    public static void sort(ArrayList<Integer> arrayList, int lo, int hi) {
-        throw new UnsupportedOperationException("sort() has not been implemented yet");
+    public static void sort(ArrayList<Integer> arrayList, int lo, int hi)
+    {
+        //throw new UnsupportedOperationException("sort() has not been implemented yet");
+        if(hi - lo <= 1)
+        {
+            return;
+        }
+        int mid = (hi + lo)/2;
+        sort(arrayList, lo, mid);
+        sort(arrayList, mid, hi);
+        merge(arrayList, lo, mid, hi);
+
     }
+
+
 
     /**
      * This function is a helper function used to help you implement mergeSort.
