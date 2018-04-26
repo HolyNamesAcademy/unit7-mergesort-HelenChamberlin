@@ -82,11 +82,31 @@ public class Main {
 
         while(q < mid || w < hi)
         {
-            if (arrayList.get(lo + k) <= arrayList.get(mid + k))
+            if (w == hi)
             {
-                n.add(arrayList.get(lo + k));
-                k++;
+                n.add(arrayList.get(q));
+                q++;
             }
+            else if(q == mid)
+            {
+                n.add(arrayList.get(w));
+                w++;
+            }
+            else if(arrayList.get(q) < arrayList.get(w))
+            {
+                n.add(arrayList.get(w));
+                w++;
+            }
+            else
+            {
+                n.add(arrayList.get(q));
+                q++;
+            }
+
+        }
+        for(int i = 0; i < n.size(); i++)
+        {
+            arrayList.set(i + lo, n.get(i));
         }
 
     }
